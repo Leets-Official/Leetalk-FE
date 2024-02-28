@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
+import '../ui/global.css';
 
 export const metadata: Metadata = {
-  title: "리톡",
-  description: "Leetalk",
+  title: '리톡',
+  description: 'Leetalk',
 };
 
 export default function RootLayout({
