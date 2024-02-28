@@ -1,6 +1,3 @@
-import Footer from '../../components/layout/Footer';
-import Header from '../../components/layout/Header';
-
 export default function MainLayout({
   children,
 }: {
@@ -9,9 +6,7 @@ export default function MainLayout({
   return (
     <section>
       <div className="relative max-w-[1920px] h-[1920px] mx-auto">
-        <Header />
         {children}
-        <Footer />
       </div>
     </section>
   );

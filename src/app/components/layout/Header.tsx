@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <header className="z-20 fixed w-full h-[100px] ml-[3%] flex gap-[70px] items-center text-zinc-500 text-xl font-bold">
+    <header className="z-20 disable-text-select bg-white fixed w-full h-[100px] ml-[3%] flex gap-[70px] items-center text-zinc-500 text-xl font-bold">
       <div>
         <Link href="/main">
           <Icons name={leetalk} />

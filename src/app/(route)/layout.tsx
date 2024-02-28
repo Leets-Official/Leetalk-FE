@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import '../ui/global.css';
+import RecoilProvider from '../context/RecoilProvider';
 
 export const metadata: Metadata = {
   title: '리톡',
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="h-screen">{children}</body>
+      <body className="h-screen">
+        <RecoilProvider>{children}</RecoilProvider>
+      </body>
     </html>
   );
 }

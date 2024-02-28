@@ -1,11 +1,13 @@
-export default function MainLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+import Footer from '../../components/layout/Footer';
+import Header from '../../components/layout/Header';
+import CategoriesContainer from '../../components/container/CategoriesContainer';
+
+export default function MainPage() {
   return (
     <section>
-      <div className="w-full h-full">{children}</div>
+      <Header />
+      <CategoriesContainer />
+      <Footer />
     </section>
   );
 }
