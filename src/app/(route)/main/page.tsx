@@ -6,7 +6,7 @@ import FeedItemContainer from '../../components/main/container/FeedItemContainer
 export default function MainPage() {
   return (
     <section>
-      <Header />
+      <Header type="feed" />
       <CategoriesContainer />
       <FeedItemContainer className=" top-60" />
       <Footer />
