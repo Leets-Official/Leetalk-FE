@@ -14,7 +14,11 @@ const FeedItemSecondContainer = ({
   return (
     <div className="w-[700px] h-full mt-4">
       <div>
-        <FeedTagContainer taglist={['tag1', 'tag2', 'tag3']} />
+        <FeedTagContainer
+          taglist={['tag1', 'tag2', 'tag3']}
+          backgroundstyle="mr-5"
+          textstyle="text-black text-lg font-medium"
+        />
         <div className="text-black text-3xl font-bold mb-7">제목인디요</div>
         <div className="text-zinc-500 text-base font-medium">
           {`요즘 20대 청년들이 가장 관심을 가지고 있는 주제들을 함께 알아보려고

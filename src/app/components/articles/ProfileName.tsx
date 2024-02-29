@@ -1,7 +1,13 @@
-const ProfileName = () => {
+interface ProfileNameProps {
+  name: string;
+}
+
+const ProfileName = ({ name }: ProfileNameProps) => {
   return (
-    <div>
-      <h1>Profile Name</h1>
+    <div className="w-[33%] flex justify-center text-white">
+      <div className="w-[130px] h-[37px] px-7 py-[9px] rounded-[20px] border border-white justify-center items-center gap-2.5 inline-flex">
+        <div className="text-sm font-normal">{name}</div>
+      </div>
     </div>
   );
 };

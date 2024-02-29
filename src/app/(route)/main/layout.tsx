@@ -5,9 +5,7 @@ export default function MainLayout({
 }) {
   return (
     <section>
-      <div className="relative max-w-[1920px] h-[1920px] mx-auto">
-        {children}
-      </div>
+      <div className="relative max-w-[1920px] mx-auto">{children}</div>
     </section>
   );
 }

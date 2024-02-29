@@ -1,7 +1,10 @@
+import { share } from '../../ui/IconPath';
+import Icons from '../common/Icons';
+
 const Share = () => {
   return (
     <div>
-      <h1>Share</h1>
+      <Icons name={share} />
     </div>
   );
 };

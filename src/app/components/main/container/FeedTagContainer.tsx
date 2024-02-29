@@ -2,14 +2,25 @@ import FeedTag from '../FeedTag';
 
 interface FeedTagContainerProps {
   taglist: string[];
+  backgroundstyle?: string;
+  textstyle?: string;
 }
 
-const FeedTagContainer = ({ taglist }: FeedTagContainerProps) => {
+const FeedTagContainer = ({
+  taglist,
+  backgroundstyle,
+  textstyle,
+}: FeedTagContainerProps) => {
   return (
-    <div className="w-full mb-5">
+    <div className="mb-5">
       <div className="flex items-center">
         {taglist.map((tag) => (
-          <FeedTag key={tag} tag={tag} />
+          <FeedTag
+            key={tag}
+            tag={tag}
+            backgroundstyle={`${backgroundstyle}`}
+            textstyle={`${textstyle}`}
+          />
         ))}
       </div>
     </div>

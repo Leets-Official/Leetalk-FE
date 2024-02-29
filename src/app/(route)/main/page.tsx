@@ -5,11 +5,13 @@ import FeedItemContainer from '../../components/main/container/FeedItemContainer
 
 export default function MainPage() {
   return (
-    <section>
+    <div className="flex flex-col min-h-screen">
       <Header type="feed" />
-      <CategoriesContainer />
-      <FeedItemContainer className=" top-60" />
+      <div className="flex-grow">
+        <CategoriesContainer />
+        <FeedItemContainer className="mt-50" />
+      </div>
       <Footer />
-    </section>
+    </div>
   );
 }

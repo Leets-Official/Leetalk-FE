@@ -1,11 +1,13 @@
 interface FeedTagProps {
   tag: string;
+  textstyle?: string;
+  backgroundstyle?: string;
 }
 
-const FeedTag = ({ tag }: FeedTagProps) => {
+const FeedTag = ({ tag, textstyle, backgroundstyle }: FeedTagProps) => {
   return (
-    <div className="mr-5">
-      <div className="text-black text-lg font-medium"># {tag}</div>
+    <div className={`${backgroundstyle}`}>
+      <div className={`${textstyle}`}># {tag}</div>
     </div>
   );
 };

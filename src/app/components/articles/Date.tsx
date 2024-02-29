@@ -5,9 +5,10 @@ interface DateProps {
 
 const Date = ({ date, category }: DateProps) => {
   return (
-    <div className="top-[34px] absolute text-black text-base font-medium">
-      {date}
-      {category}
+    <div className="flex gap-[11%] text-white text-base font-medium">
+      <span>{category}</span>
+      <span>|</span>
+      <span>{date}</span>
     </div>
   );
 };
