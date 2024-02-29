@@ -3,6 +3,8 @@ import FeedTagContainer from '../../main/container/FeedTagContainer';
 import Date from '../Date';
 import ProfileName from '../ProfileName';
 import Share from '../Share';
+import SubTitle from '../SubTitle';
+import Title from '../Title';
 
 const TitleContainer = () => {
   return (
@@ -18,12 +20,14 @@ const TitleContainer = () => {
             <Share />
           </div>
         </div>
-        <div className="w-full z-10">
+        <div className="w-full z-10 mt-[20%]">
           <FeedTagContainer
             taglist={['하이', '방가', '프론트']}
             backgroundstyle="mr-5"
-            textstyle="text-white text-lg font-medium"
+            textstyle="text-white font-medium text-base"
           />
+          <Title title="타이틀" />
+          <SubTitle subtitle="서브타이틀" />
         </div>
       </div>
     </div>

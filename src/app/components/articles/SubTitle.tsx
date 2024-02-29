@@ -1,7 +1,11 @@
-const SubTitle = () => {
+interface SubTitleProps {
+  subtitle: string;
+}
+
+const SubTitle = ({ subtitle }: SubTitleProps) => {
   return (
     <div>
-      <h2 className="text-3xl font-bold text-gray-800">SubTitle</h2>
+      <div className="text-sm font-bold text-white">{subtitle}</div>
     </div>
   );
 };
