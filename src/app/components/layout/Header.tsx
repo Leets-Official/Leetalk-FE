@@ -17,17 +17,13 @@ const Header = ({ type }: HeaderProps) => {
       <div className="flex cursor-pointer gap-[70px]">
         <Link
           href="/main/feed"
-          className={
-            type === 'feed' ? 'text-black' : 'text-zinc-500 hover:text-black'
-          }
+          className={`text-${type === 'feed' || type === 'articles' ? 'black' : 'zinc-500 hover:text-black'}`}
         >
           피드
         </Link>
         <Link
           href="/main/write"
-          className={
-            type === 'wrtie' ? 'text-black' : 'text-zinc-500 hover:text-black'
-          }
+          className={`text-${type === 'write' || type === 'articles' ? 'black' : 'zinc-500 hover:text-black'}`}
         >
           작성하기
         </Link>
