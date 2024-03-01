@@ -5,7 +5,7 @@ import Header from '../../../components/layout/Header';
 
 export default function ArticlesPage({ params }: { params: { slug: string } }) {
   return (
-    <section>
+    <section className="flex flex-col gap-12">
       <Header type="articles" />
       <TitleContainer />
       <ContentContainer contents={mockContents} />
