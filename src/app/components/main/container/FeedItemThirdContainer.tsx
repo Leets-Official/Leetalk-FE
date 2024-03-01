@@ -16,9 +16,15 @@ const FeedItmeThirdContainer = ({
         {coverImgUrl ? (
           <Image
             src={coverImgUrl}
-            fill={true}
-            alt="coverImg"
-            style={{ objectFit: 'cover' }}
+            alt="content"
+            width={1280}
+            height={700}
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'center center',
+              width: '100%',
+              height: '100%',
+            }}
           />
         ) : (
           <DefaultCoverImg />
