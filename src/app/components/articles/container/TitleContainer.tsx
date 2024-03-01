@@ -8,9 +8,9 @@ import Title from '../Title';
 
 const TitleContainer = () => {
   return (
-    <div className="relative top-[100px] w-full flex justify-center">
+    <div className="relative top-[100px] h-[700px] w-full flex justify-center">
       <DefaultDetailCoverImg />
-      <div className="w-full z-10 px-[2%] flex flex-col">
+      <div className="w-full z-10 px-[16%] flex flex-col">
         <div className="w-full mt-5 flex items-center justify-center">
           <div className="w-[33%] flex justify-start">
             <Date category="Frontend" date="2024.02.01" />
