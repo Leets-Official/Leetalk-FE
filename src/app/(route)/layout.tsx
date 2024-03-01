@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
+import '../ui/global.css';
+import RecoilProvider from '../context/RecoilProvider';
 
 export const metadata: Metadata = {
-  title: "리톡",
-  description: "Leetalk",
+  title: '리톡',
+  description: 'Leetalk',
 };
 
 export default function RootLayout({
@@ -12,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="h-screen">{children}</body>
+      <body className="min-h-screen max-w-screen">
+        <RecoilProvider>{children}</RecoilProvider>
+      </body>
     </html>
   );
 }
