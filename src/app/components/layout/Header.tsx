@@ -8,7 +8,7 @@ interface HeaderProps {
 
 const Header = ({ type }: HeaderProps) => {
   return (
-    <header className="z-20 disable-text-select bg-white fixed w-full h-[100px] pl-[3%] flex gap-[70px] items-center text-xl font-bold">
+    <header className="z-20 disable-text-select bg-white fixed w-full h-[100px] pl-[16%] flex gap-[70px] items-center text-xl font-bold">
       <div>
         <Link href="/main">
           <Icons name={leetalk} />
