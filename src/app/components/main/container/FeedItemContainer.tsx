@@ -28,14 +28,14 @@ const FeedItemContainer = ({ className, data }: FeedItemContainerProps) => {
             />
             <FeedItmeThirdContainer
               coverImgUrl={item.coverImgUrl}
-              writreName={item.writerName}
+              writerName={item.writerName}
             />
           </div>
         </Link>
       </div>
     ));
 
-    return <>{feedItems}</>; // 변수에 저장된 JSX 반환
+    return <>{feedItems}</>;
   } else {
     return (
       <div className="relative my-60 w-full flex justify-center">
