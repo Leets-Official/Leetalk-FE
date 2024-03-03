@@ -5,16 +5,21 @@ import Header from '../../../components/layout/Header';
 import CategoriesContainer from '../../../components/container/CategoriesContainer';
 import FeedItemContainer from '../../../components/main/container/FeedItemContainer';
 import { useEffect, useState } from 'react';
+import useCategoryQueryParam from '../../../hooks/useCategoryQueryParam';
 
 export default function MainFeedPage() {
+  const categoryQueryParam = useCategoryQueryParam();
   const [data, setData] = useState<FeedList[] | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_NEXT_SERVER}/api/main/feed`,
-        );
+        let url = `${process.env.NEXT_PUBLIC_NEXT_SERVER}/api/main/feed`;
+        if (categoryQueryParam !== 'everything') {
+          url += `?category=${categoryQueryParam}`;
+        }
+        console.log('url', url);
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }
@@ -26,7 +31,7 @@ export default function MainFeedPage() {
     };
 
     fetchData();
-  }, []);
+  }, [categoryQueryParam]);
 
   useEffect(() => {
     console.log('out useEffect data', data);

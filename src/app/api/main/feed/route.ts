@@ -3,15 +3,25 @@ import { getFeedList } from '../../../service/getRequests';
 export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(req.url);
+    console.log('searchParams', searchParams);
     const category = searchParams.get('category') || undefined;
     const userId = searchParams.get('userId');
-
     const parsedUserId = userId ? parseInt(userId) : undefined;
+
     //const data = await getFeedList(category, parsedUserId);
 
-    const data = mockData;
-    console.log('data', data);
-    return new Response(JSON.stringify(data), {
+    console.log('category', category);
+    let filteredData = mockData.data;
+    if (category) {
+      filteredData = mockData.data.filter((item) => item.category === category);
+    }
+
+    console.log('filteredData', filteredData);
+    const filterResponseData = { code: 200, data: filteredData };
+
+    //const data = mockData;
+    //console.log('data', data);
+    return new Response(JSON.stringify(filterResponseData), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
@@ -64,7 +74,7 @@ const mockData = {
       truncatedContent: '디자인을 배우고 싶다면 이 글을 클릭해주세요.',
       coverImgUrl: '',
       tags: ['DESIGN', '디자인', '디자이너'],
-      writerName: '김헤진',
+      writerName: '김혜진',
       createdAt: '2024-02-01',
     },
     {
