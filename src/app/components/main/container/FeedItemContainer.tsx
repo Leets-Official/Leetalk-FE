@@ -2,6 +2,7 @@ import Link from 'next/link';
 import FeedItemFirstContainer from './FeedItemFirstContainer';
 import FeedItemSecondContainer from './FeedItemSecondContainer';
 import FeedItmeThirdContainer from './FeedItemThirdContainer';
+import useCategoryData from '../../../hooks/useCategoryData';
 
 interface FeedItemContainerProps {
   className: string;
@@ -18,7 +19,7 @@ const FeedItemContainer = ({ className, data }: FeedItemContainerProps) => {
         <Link href={`/articles/${item.articleId}`}>
           <div className="flex justify-between items-center h-[256px] w-[1204px] border-b border-[#808080] pb-[50px]">
             <FeedItemFirstContainer
-              category={item.category}
+              category={useCategoryData(item.category)}
               date={item.createdAt}
             />
             <FeedItemSecondContainer
