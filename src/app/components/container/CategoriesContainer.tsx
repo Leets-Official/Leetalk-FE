@@ -13,7 +13,7 @@ const CategoriesContainer = () => {
   };
 
   return (
-    <div className="relative mt-44 mb-24 w-full flex justify-center item-center">
+    <div className="relative px-[16%] mt-44 mb-24 w-full flex justify-center item-center">
       <div className="w-[1204px] flex justify-between">
         {CATEGORIES.map((category) => (
           <Categories

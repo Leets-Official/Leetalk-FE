@@ -9,12 +9,12 @@ const FeedItemFirstContainer = ({
 }: FeedItemFirstContainerProps) => {
   return (
     <div className="left-0 h-full flex mt-4 justify-center">
-      <div className="w-[86px] h-[53px] left-0 top-0 relative flex justify-center">
+      <div className="w-24 h-[53px] left-0 top-0 relative flex justify-center">
         <div className="top-0 absolute text-black text-xl font-bold">
-          Frontend
+          {category}
         </div>
         <div className="top-[34px] absolute text-black text-base font-medium">
-          2024.02.01
+          {date}
         </div>
       </div>
     </div>
