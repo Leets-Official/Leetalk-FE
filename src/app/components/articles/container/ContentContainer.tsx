@@ -17,7 +17,7 @@ const ContentContainer = ({ content, subtitle }: ContentContainerProps) => {
         return (
           <span
             key={index}
-            className={`my-12 text-black text-base leading-[35px] tracking-wide ${
+            className={`my-12 text-black mobile:text-[10px] sm:text-xs md:text-sm lg:text-xl mobile:leading-[25px] sm:leading-[30px]  md:leading-[35px] lg:leading-[40px] tracking-wide  ${
               contents.weight === 20 ? `font-bold` : `font-normal`
             }`}
           >
@@ -53,7 +53,7 @@ const ContentContainer = ({ content, subtitle }: ContentContainerProps) => {
 
   return (
     <div className="w-full px-[16%] relative top-[100px] my-[5%]">
-      <div className="text-black text-lg font-semibold tracking-wide">
+      <div className="text-black mobile:text-xs sm:text-sm md:text-base lg:text-xl font-semibold">
         {subtitle}
       </div>
       <div className={`mt-[10%] text-${textalign}`}>

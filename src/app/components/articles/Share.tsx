@@ -18,7 +18,7 @@ const Share = () => {
   };
 
   return (
-    <div className="w-[20%] h-[20%]">
+    <div className="w-[30%] h-[30%]">
       <Icons
         name={share}
         className=" cursor-pointer"

@@ -8,25 +8,27 @@ interface HeaderProps {
 
 const Header = ({ type }: HeaderProps) => {
   return (
-    <header className="z-20 disable-text-select bg-white fixed w-full h-[100px] pl-[16%] flex gap-[70px] items-center text-xl font-bold">
-      <div>
-        <Link href="/main">
-          <Icons name={leetalk} />
-        </Link>
-      </div>
-      <div className="flex cursor-pointer gap-[70px]">
-        <Link
-          href="/main/feed"
-          className={`text-${type === 'feed' || type === 'articles' ? 'black' : 'zinc-500 hover:text-black'}`}
-        >
-          피드
-        </Link>
-        <Link
-          href="/main/write"
-          className={`text-${type === 'write' || type === 'articles' ? 'black' : 'zinc-500 hover:text-black'}`}
-        >
-          작성하기
-        </Link>
+    <header className="z-20 disable-text-select w-[100%] bg-white fixed h-[100px] md:h-[120px] flex justify-center items-center text-xl font-bold">
+      <div className="w-[75%] flex items-center gap-7 sm:gap-[70px] ">
+        <div className="w-[30%] max-w-[220px]">
+          <Link href="/main" className="">
+            <Icons name={leetalk} />
+          </Link>
+        </div>
+        <div className="flex cursor-pointer gap-7 sm:gap-[70px]">
+          <Link
+            href="/main/feed"
+            className={`text-xs sm:text-base md:text-lg lg:text-xl text-${type === 'feed' || type === 'articles' ? 'black' : 'zinc-500 hover:text-black'}`}
+          >
+            피드
+          </Link>
+          <Link
+            href="/main/write"
+            className={`text-xs sm:text-base md:text-lg lg:text-xl text-${type === 'write' || type === 'articles' ? 'black' : 'zinc-500 hover:text-black'}`}
+          >
+            작성하기
+          </Link>
+        </div>
       </div>
     </header>
   );

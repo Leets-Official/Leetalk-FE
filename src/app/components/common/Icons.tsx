@@ -20,8 +20,8 @@ const Icons = ({ name, className, onClick, hoverFill }: IconProps) => {
 
   return (
     <svg
-      width={width}
-      height={height}
+      width="100%"
+      height="auto"
       viewBox={`0 0 ${width} ${height}`}
       onClick={onClick}
       fill={hoverFill || fill}

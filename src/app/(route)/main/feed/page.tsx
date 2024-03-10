@@ -38,9 +38,9 @@ export default function MainFeedPage() {
   }, [data]);
 
   return (
-    <div className="flex flex-col w-screen max-w-[1920px] min-h-screen">
+    <div className="flex flex-col items-center w-full max-w-[1920px] min-h-screen">
       <Header type="feed" />
-      <div className="flex-grow">
+      <div className="flex flex-col items-center justify-center">
         <CategoriesContainer />
         <FeedItemContainer className="mt-50" data={data} />
       </div>

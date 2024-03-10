@@ -4,9 +4,11 @@ interface ProfileNameProps {
 
 const ProfileName = ({ name }: ProfileNameProps) => {
   return (
-    <div className="w-[33%] flex justify-center text-white">
-      <div className="w-[130px] h-[37px] px-7 py-[9px] rounded-[20px] border border-white justify-center items-center gap-2.5 inline-flex">
-        <div className="text-sm font-normal">{name}</div>
+    <div className="w-[33%] h-[100%] flex justify-center items-center text-white">
+      <div className="mobile:w-[60%] sm:w-auto mobile:h-[90%] sm:h-[30%] sm:px-7 sm:py-4 rounded-[20px] border border-white justify-center items-center gap-2.5 inline-flex">
+        <div className="mobile:text-[8.2px] md:text-xs lg:text-sm font-normal">
+          {name}
+        </div>
       </div>
     </div>
   );

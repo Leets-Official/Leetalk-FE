@@ -50,7 +50,7 @@ export default function ArticlesPage({ params }: { params: { slug: string } }) {
     }: Article = data;
 
     return (
-      <section className="flex flex-col gap-12">
+      <section className="flex flex-col gap-12 items-center w-full max-w-[1920px] min-h-screen">
         <Header type="articles" />
         <TitleContainer
           coverImgName={coverImgName}

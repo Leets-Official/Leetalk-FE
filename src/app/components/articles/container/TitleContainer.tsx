@@ -30,7 +30,7 @@ const TitleContainer = ({
   return (
     <div className="relative top-[100px] max-h-700 pb-[6%] overflow-hidden w-full flex justify-center">
       {coverImgName ? (
-        <div className="w-full absolute z-0">
+        <div className="w-full h-full absolute z-0">
           <Image
             src={coverImgName}
             alt="coverImg"
@@ -49,19 +49,19 @@ const TitleContainer = ({
       )}
       <div className="w-full z-10 px-[16%] flex flex-col">
         <div className="w-full mt-5 flex items-center justify-center">
-          <div className="w-[33%] flex justify-start">
+          <div className="w-[33%] h-[10%] flex justify-start">
             <Date category={useCategoryData(category)} date={createdAt} />
           </div>
           <ProfileName name={writerName} />
-          <div className="w-[33%] flex justify-end">
+          <div className="w-[33%] h-full flex items-center justify-end">
             <Share />
           </div>
         </div>
         <div className="w-full z-10 mt-[20%]">
           <FeedTagContainer
             taglist={tags}
-            backgroundstyle="mr-5"
-            textstyle="text-white font-medium text-base"
+            backgroundstyle="mr-3"
+            textstyle="text-white font-medium mobile:text-[8px] sm:text-sm md:text-base"
           />
           <Title title={title} />
           <SubTitle subtitle={subtitle} />

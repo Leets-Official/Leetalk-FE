@@ -1,8 +1,8 @@
 export const DefaultCoverImg = () => {
   return (
     <svg
-      width="296"
-      height="216"
+      width="100%"
+      height="auto"
       viewBox="0 0 296 216"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
