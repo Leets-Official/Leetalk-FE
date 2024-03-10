@@ -1,38 +1,73 @@
+'use client';
+
 import ContentContainer from '../../../components/articles/container/ContentContainer';
 import ProfileContainer from '../../../components/articles/container/ProfileContainer';
 import TitleContainer from '../../../components/articles/container/TitleContainer';
 import Header from '../../../components/layout/Header';
+import { useEffect, useState } from 'react';
 
 export default function ArticlesPage({ params }: { params: { slug: string } }) {
-  return (
-    <section className="flex flex-col gap-12">
-      <Header type="articles" />
-      <TitleContainer />
-      <ContentContainer contents={mockContents} />
-      <ProfileContainer />
-    </section>
-  );
-}
+  console.log('params', params);
+  const slug = params.slug[0];
+  const [data, setData] = useState<Article | null>(null);
+  useEffect(() => {
+    if (slug) {
+      fetchData(slug);
+    }
+  }, [slug]);
 
-const mockContents: Array<Content> = [
-  {
-    id: 1,
-    type: 'text',
-    data: '텍스트 컨텐츠 1 텍스트 컨텐츠 1  텍스트 컨텐츠 1 텍스트 컨텐츠 1 텍스트 컨텐츠 1 텍스트 컨텐츠 1  텍스트 컨텐츠 1 텍스트 컨텐츠 1 텍스트 컨텐츠 1 텍스트 컨텐츠 1 텍스트 컨텐츠 1 텍스트 컨텐츠 1 텍스트 컨텐츠 1 텍스트 컨텐츠 1 텍스트 컨텐츠 1 텍스트 컨텐츠 1텍스트 컨텐츠 1 텍스트 컨텐츠 1 텍스트 컨텐츠 1 텍스트 컨텐츠 1 텍스트 컨텐츠 1 텍스트 컨텐츠 1',
-  },
-  {
-    id: 2,
-    type: 'image',
-    data: '/images/sunny.jpg',
-  },
-  {
-    id: 3,
-    type: 'text',
-    data: '텍스트 컨텐츠 2',
-  },
-  {
-    id: 4,
-    type: 'image',
-    data: '/images/img2.jpg',
-  },
-];
+  const fetchData = async (slug: string) => {
+    try {
+      console.log('slug type:', typeof slug);
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_NEXT_SERVER}/api/articles/${slug}`,
+      );
+      if (!response.ok) {
+        throw new Error('Failed to fetch data');
+      }
+      const responseData = await response.json();
+      console.log('responseData', responseData);
+      if (responseData.data != undefined) {
+        setData(responseData.data);
+      }
+    } catch (error) {
+      console.error('Error occurred while fetching data:', error);
+    }
+  };
+
+  if (data) {
+    const {
+      content,
+      category,
+      title,
+      subtitle,
+      coverImgName,
+      tags,
+      writerName,
+      writerBio,
+      writerProfileImgName,
+      createdAt,
+    }: Article = data;
+
+    return (
+      <section className="flex flex-col gap-12">
+        <Header type="articles" />
+        <TitleContainer
+          coverImgName={coverImgName}
+          category={category}
+          title={title}
+          subtitle={subtitle}
+          tags={tags}
+          writerName={writerName}
+          createdAt={createdAt}
+        />
+        <ContentContainer content={content} subtitle={subtitle} />
+        <ProfileContainer
+          writerProfileImgName={writerProfileImgName}
+          writerName={writerName}
+          writerBio={writerBio}
+        />
+      </section>
+    );
+  }
+}

@@ -1,4 +1,4 @@
-const useCategoryData = (category: string) => {
+const useCategoryData = (category: string | undefined) => {
   const getCategoryData = (): string => {
     switch (category) {
       case 'FRONT_END':

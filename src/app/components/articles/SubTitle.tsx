@@ -1,5 +1,5 @@
 interface SubTitleProps {
-  subtitle: string;
+  subtitle: string | undefined;
 }
 
 const SubTitle = ({ subtitle }: SubTitleProps) => {

@@ -1,7 +1,7 @@
 import FeedTag from '../FeedTag';
 
 interface FeedTagContainerProps {
-  taglist: string[];
+  taglist: string[] | undefined;
   backgroundstyle?: string;
   textstyle?: string;
 }
@@ -14,7 +14,7 @@ const FeedTagContainer = ({
   return (
     <div className="mb-5">
       <div className="flex items-center">
-        {taglist.map((tag) => (
+        {taglist?.map((tag) => (
           <FeedTag
             key={tag}
             tag={tag}
