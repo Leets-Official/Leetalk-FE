@@ -1,5 +1,5 @@
 interface ProfileNameProps {
-  name: string;
+  name: string | undefined;
 }
 
 const ProfileName = ({ name }: ProfileNameProps) => {
