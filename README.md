@@ -1,7 +1,5 @@
   ![리톡 화면_대지 1 1](https://github.com/Leets-Official/Leetalk-FE/assets/101498350/cab96fab-ea98-4785-b0ca-542d5fc926ba)
 
-<img src="public/illustration/common/chat/chatlist.png"/>
-
 <br />
 
 > 서비스 바로가기 <br /> > **
