@@ -3,7 +3,7 @@ export default function DefaultDetailCoverImg() {
     <div className="w-full h-full absolute z-0">
       <svg
         width="100%"
-        height="auto"
+        height="100%"
         viewBox="0 0 1920 700"
         preserveAspectRatio="xMidYMid slice"
         fill="none"

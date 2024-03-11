@@ -2,7 +2,8 @@ import { getFeedList } from '../../../service/getRequests';
 
 export async function GET(req: Request) {
   try {
-    const { searchParams } = new URL(req.url);
+    const request = new Request(req);
+    const { searchParams } = new URL(request.url);
     console.log('searchParams', searchParams);
     const category = searchParams.get('category') || undefined;
     const userId = searchParams.get('userId');

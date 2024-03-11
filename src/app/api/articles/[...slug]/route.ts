@@ -2,7 +2,8 @@ import { getArticle } from '../../../service/getRequests';
 
 export async function GET(req: Request) {
   try {
-    const articleId = req.url.split('/').pop();
+    const request = new Request(req);
+    const articleId = request.url.split('/').pop();
     console.log('articleId', articleId);
 
     const data = await getArticle(articleId);

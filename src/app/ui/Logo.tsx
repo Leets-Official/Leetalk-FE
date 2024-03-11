@@ -3,7 +3,7 @@ export const FooterLeetalk = () => {
     <div className="w-[30%] mr-2 flex items-center">
       <svg
         width="100%"
-        height="auto"
+        height="100%"
         viewBox="0 0 73 20"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ export const Leets = () => {
     <div className="w-[18%] mx-2 h-full flex items-center">
       <svg
         width="100%"
-        height="auto"
+        height="100%"
         viewBox="0 0 24 15"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ export const Instagram = () => {
   return (
     <svg
       width="100%"
-      height="auto"
+      height="100%"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@ export const Github = () => {
   return (
     <svg
       width="100%"
-      height="auto"
+      height="100%"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ export const KakaoTalk = () => {
   return (
     <svg
       width="100%"
-      height="auto"
+      height="100%"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
