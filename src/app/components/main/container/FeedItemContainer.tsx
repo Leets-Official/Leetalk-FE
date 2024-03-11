@@ -49,7 +49,7 @@ const FeedItemContainer = ({ className, data }: FeedItemContainerProps) => {
   } else {
     return (
       <div className="relative my-60 w-full flex justify-center">
-        <div className="px-[16%] text-6xl font-semibold text-black justify-center items-center">
+        <div className="px-[16%] text-base sm:text-lg md:text-3xl lg:text-6xl font-semibold text-black justify-center items-center">
           새로운 글을 기다려주세요!
         </div>
       </div>

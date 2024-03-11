@@ -8,12 +8,14 @@ export async function GET(req: Request) {
     const userId = searchParams.get('userId');
     const parsedUserId = userId ? parseInt(userId) : undefined;
 
-    //const data = await getFeedList(category, parsedUserId);
+    const data = await getFeedList(category, parsedUserId);
 
     console.log('category', category);
-    let filteredData = mockData.data;
+    let filteredData = data.data;
     if (category) {
-      filteredData = mockData.data.filter((item) => item.category === category);
+      filteredData = data.data.filter(
+        (item: FeedList) => item.category === category,
+      );
     }
 
     console.log('filteredData', filteredData);

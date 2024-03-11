@@ -40,7 +40,7 @@ export default function MainFeedPage() {
   return (
     <div className="flex flex-col items-center w-full max-w-[1920px] min-h-screen">
       <Header type="feed" />
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center w-full">
         <CategoriesContainer />
         <FeedItemContainer className="mt-50" data={data} />
       </div>

@@ -21,14 +21,14 @@ export const getFeedList = async (category?: string, userId?: number) => {
 
 export const getArticle = async (articleId: string | undefined) => {
   console.log('articleId in getArticle', articleId);
-  // const response = await fetch(
-  //   `${process.env.NEXT_PUBLIC_SERVER}/articles/${articleId}`,
-  // );
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_SERVER}/articles/${articleId}`,
+  );
   if (!articleId) {
     throw new Error('Article ID is missing');
   }
-  const responseData = getArticlesMockData;
-  //const responseData = await response.json();
+  //const responseData = getArticlesMockData;
+  const responseData = await response.json();
   console.log('json', responseData);
 
   if (Object.keys(responseData).length === 0) {
