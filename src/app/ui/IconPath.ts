@@ -10,7 +10,7 @@ export const leetalk = {
   ],
   width: 187,
   height: 45,
-  fill: '#2EB79C',
+  fill: '#4A93FF',
 };
 
 export const share = {

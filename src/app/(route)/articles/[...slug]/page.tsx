@@ -19,9 +19,8 @@ export default function ArticlesPage({ params }: { params: { slug: string } }) {
   const fetchData = async (slug: string) => {
     try {
       console.log('slug type:', typeof slug);
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_NEXT_SERVER}/api/articles/${slug}`,
-      );
+      const url = `${process.env.NEXT_PUBLIC_NEXT_SERVER}/api/articles/${slug}`;
+      const response = await fetch(url);
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }

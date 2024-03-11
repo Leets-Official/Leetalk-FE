@@ -27,8 +27,8 @@ export const getArticle = async (articleId: string | undefined) => {
   if (!articleId) {
     throw new Error('Article ID is missing');
   }
-  //const responseData = getArticlesMockData;
-  const responseData = await response.json();
+  const responseData = getArticlesMockData;
+  //const responseData = await response.json();
   console.log('json', responseData);
 
   if (Object.keys(responseData).length === 0) {

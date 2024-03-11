@@ -2,13 +2,15 @@ import { getFeedList } from '../../../service/getRequests';
 
 export async function GET(req: Request) {
   try {
-    const { searchParams } = new URL(req.url);
+    const request = new Request(req);
+    const { searchParams } = new URL(request.url);
     console.log('searchParams', searchParams);
     const category = searchParams.get('category') || undefined;
     const userId = searchParams.get('userId');
     const parsedUserId = userId ? parseInt(userId) : undefined;
 
-    const data = await getFeedList(category, parsedUserId);
+    //const data = await getFeedList(category, parsedUserId);
+    const data = mockData;
 
     console.log('category', category);
     let filteredData = data.data;
@@ -21,7 +23,6 @@ export async function GET(req: Request) {
     console.log('filteredData', filteredData);
     const filterResponseData = { code: 200, data: filteredData };
 
-    //const data = mockData;
     //console.log('data', data);
     return new Response(JSON.stringify(filterResponseData), {
       status: 200,
