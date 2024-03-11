@@ -19,8 +19,8 @@ export default function DefaultDetailCoverImg() {
             y2="700"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#2EB79C" />
-            <stop offset="1" stopColor="#2EB79C" stopOpacity="0.3" />
+            <stop stopColor="#4A93FF" />
+            <stop offset="1" stopColor="#4A93FF" stopOpacity="0.3" />
           </linearGradient>
         </defs>
       </svg>

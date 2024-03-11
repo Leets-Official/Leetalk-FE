@@ -50,8 +50,8 @@ export const DefaultCoverImg = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(148 108) rotate(90) scale(143 195.963)"
         >
-          <stop stopColor="#2EB79C" />
-          <stop offset="1" stopColor="#2EB79C" stopOpacity="0.3" />
+          <stop stopColor="#4A93FF" />
+          <stop offset="1" stopColor="#4A93FF" stopOpacity="0.3" />
         </radialGradient>
       </defs>
     </svg>
